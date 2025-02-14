@@ -1,0 +1,32 @@
+.finalCTA {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--cta-bg);
+    color: var(--cta-text);
+    transition: background 0.3s, color 0.3s;
+}
+
+.ctaContent h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ctaContent p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.ctaButton {
+    background: var(--cta-btn-bg);
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.ctaButton:hover {
+    background: var(--cta-btn-hover);
+}

@@ -1,0 +1,140 @@
+/* Light Mode */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+
+    /* Hero */
+    --hero-bg: #f0f8ff;
+    --hero-text: #333;
+
+    /* Services Overview */
+    --services-bg: #ffffff;
+    --services-text: #333;
+    --card-bg: #f9f9f9;
+    --card-text: #222;
+    --icon-color: #007bff;
+
+    /* Testimonials */
+    --testimonials-bg: #f0f8ff;
+    --testimonials-text: #333;
+    --card-bg: #ffffff;
+    --card-text: #222;
+    --designation-text: #777;
+
+    /* Case Studies */
+    --case-bg: #ffffff;
+    --case-text: #333;
+    --card-bg: #f9f9f9;
+    --card-text: #222;
+    --button-bg: #007bff;
+    --button-hover: #0056b3;
+
+    /* Why Choose Us */
+    --why-bg: #f0f8ff;
+    --why-text: #333;
+    --card-bg: #ffffff;
+    --card-text: #222;
+    --icon-color: #007bff;
+    --description-text: #777;
+
+    /* Final CTA */
+    --cta-bg: #007bff;
+    --cta-text: #ffffff;
+    --cta-btn-bg: #0056b3;
+    --cta-btn-hover: #003f7f;
+
+    /* blog */
+    --blog-card-bg: #ffffff;
+    --blog-card-text: #333;
+    --category-text: #007bff;
+    --read-more-color: #0056b3;
+
+    /* single-blog */
+    --blog-bg: #ffffff;
+    --blog-text: #333;
+    --meta-text: #555;
+}
+
+/* Dark Mode */
+.dark {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+
+    /* Hero */
+    --hero-bg: #001122;
+    --hero-text: #ffffff;
+
+    /* Services Overview */
+    --services-bg: #001122;
+    --services-text: #ffffff;
+    --card-bg: #0a1a2e;
+    --card-text: #ffffff;
+    --icon-color: #00bcd4;
+
+    /* Testimonials */
+    --testimonials-bg: #001122;
+    --testimonials-text: #ffffff;
+    --card-bg: #0a1a2e;
+    --card-text: #ffffff;
+    --designation-text: #99aabb;
+
+    /* Case Studies */
+    --case-bg: #001122;
+    --case-text: #ffffff;
+    --card-bg: #0a1a2e;
+    --card-text: #ffffff;
+    --button-bg: #00bcd4;
+    --button-hover: #008ba3;
+
+    /* Why Choose Us */
+    --why-bg: #001122;
+    --why-text: #ffffff;
+    --card-bg: #0a1a2e;
+    --card-text: #ffffff;
+    --icon-color: #00bcd4;
+    --description-text: #99aabb;
+
+    /* Final CTA */
+    --cta-bg: #001122;
+    --cta-text: #ffffff;
+    --cta-btn-bg: #00bcd4;
+    --cta-btn-hover: #0097a7;
+
+    /* blog */
+    --blog-card-bg: #1a1a2e;
+    --blog-card-text: #fff;
+    --category-text: #00bcd4;
+    --read-more-color: #0097a7;
+
+    /* single-blog */
+    --blog-bg: #1a1a2e;
+    --blog-text: #fff;
+    --meta-text: #ccc;
+}
+
+/* Global Page Sections */
+section {
+    position: relative;
+    z-index: 1;
+    padding: 80px 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Separating Effect (Adding Depth) */
+.dark section {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Light Mode - Soft Separation */
+/* section:not(:last-child) {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+} */
+
+/* Body */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
