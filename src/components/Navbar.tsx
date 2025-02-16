@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { FiMenu, FiX } from "react-icons/fi"; // Import icons
+import { FiMenu, FiX } from "react-icons/fi";
 import styles from "@/styles/Navbar.module.css";
 
 const Navbar = () => {
     const [darkMode, setDarkMode] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrollY, setScrollY] = useState(0);
+    const [showNavbar, setShowNavbar] = useState(true);
 
+    // Load dark mode preference
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme");
         if (savedTheme === "dark") {
@@ -15,6 +18,7 @@ const Navbar = () => {
         }
     }, []);
 
+    // Toggle dark mode
     const toggleDarkMode = () => {
         if (darkMode) {
             document.documentElement.classList.remove("dark");
@@ -26,12 +30,30 @@ const Navbar = () => {
         setDarkMode(!darkMode);
     };
 
+    // Toggle mobile menu
     const toggleMenu = () => {
         setMenuOpen((prev) => !prev);
     };
 
+    // Hide navbar on scroll down, show on scroll up
+    useEffect(() => {
+        let lastScrollY = window.scrollY;
+
+        const handleScroll = () => {
+            if (window.scrollY > lastScrollY) {
+                setShowNavbar(false); // Hide navbar when scrolling down
+            } else {
+                setShowNavbar(true); // Show navbar when scrolling up
+            }
+            lastScrollY = window.scrollY;
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <nav className={styles.navbar}>
+        <nav className={`${styles.navbar} ${showNavbar ? styles.show : styles.hide}`}>
             <div className={styles.logo}>
                 <Link href="/">Mahateam</Link>
             </div>
