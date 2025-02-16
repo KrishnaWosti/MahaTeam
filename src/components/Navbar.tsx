@@ -6,7 +6,6 @@ import styles from "@/styles/Navbar.module.css";
 const Navbar = () => {
     const [darkMode, setDarkMode] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
-    const [scrollY, setScrollY] = useState(0);
     const [showNavbar, setShowNavbar] = useState(true);
 
     // Load dark mode preference
@@ -40,11 +39,7 @@ const Navbar = () => {
         let lastScrollY = window.scrollY;
 
         const handleScroll = () => {
-            if (window.scrollY > lastScrollY) {
-                setShowNavbar(false); // Hide navbar when scrolling down
-            } else {
-                setShowNavbar(true); // Show navbar when scrolling up
-            }
+            setShowNavbar(window.scrollY < lastScrollY);
             lastScrollY = window.scrollY;
         };
 
@@ -54,30 +49,33 @@ const Navbar = () => {
 
     return (
         <nav className={`${styles.navbar} ${showNavbar ? styles.show : styles.hide}`}>
-            <div className={styles.logo}>
-                <Link href="/">Mahateam</Link>
-            </div>
+            <div className={styles.container}>
+                {/* Logo */}
+                <div className={styles.logo}>
+                    <Link href="/">Mahateam</Link>
+                </div>
 
-            {/* Hamburger Menu Icon */}
-            <div className={styles.hamburger} onClick={toggleMenu}>
-                {menuOpen ? <FiX /> : <FiMenu />}
-            </div>
+                {/* Hamburger Menu Icon */}
+                <button className={styles.hamburger} onClick={toggleMenu} aria-label="Toggle menu">
+                    {menuOpen ? <FiX /> : <FiMenu />}
+                </button>
 
-            {/* Navbar Links */}
-            <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
-                <li><Link href="/" onClick={toggleMenu}>Home</Link></li>
-                <li><Link href="/services" onClick={toggleMenu}>Services</Link></li>
-                <li><Link href="/blog" onClick={toggleMenu}>Blog</Link></li>
-                <li><Link href="/portfolio" onClick={toggleMenu}>Portfolio</Link></li>
-                <li className={styles.cta}>
-                    <Link href="/contact" onClick={toggleMenu}>Contact</Link>
-                </li>
-                <li>
-                    <button className={styles.darkModeToggle} onClick={toggleDarkMode}>
-                        {darkMode ? "🌙" : "☀️"}
-                    </button>
-                </li>
-            </ul>
+                {/* Navbar Links */}
+                <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
+                    <li><Link href="/" onClick={toggleMenu}>Home</Link></li>
+                    <li><Link href="/services" onClick={toggleMenu}>Services</Link></li>
+                    <li><Link href="/blog" onClick={toggleMenu}>Blog</Link></li>
+                    <li><Link href="/portfolio" onClick={toggleMenu}>Portfolio</Link></li>
+                    <li className={styles.cta}>
+                        <Link href="/contact" onClick={toggleMenu}>Contact</Link>
+                    </li>
+                    <li>
+                        <button className={styles.darkModeToggle} onClick={toggleDarkMode}>
+                            {darkMode ? "🌙" : "☀️"}
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </nav>
     );
 };

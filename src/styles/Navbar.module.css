@@ -1,16 +1,21 @@
+/* General Navbar Styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
     background: var(--bg-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
 }
 
 /* Hide navbar when scrolling down */
@@ -25,17 +30,22 @@
 
 /* Logo */
 .logo a {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     color: var(--text-color);
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.logo a:hover {
+    color: #007bff;
 }
 
 /* Navigation Links */
 .navLinks {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
     align-items: center;
 }
 
@@ -43,15 +53,22 @@
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navLinks li a:hover {
+    color: #007bff;
 }
 
 /* Call-to-action button */
 .cta a {
-    padding: 10px 15px;
+    padding: 10px 18px;
     background: #007bff;
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
 }
 
 .cta a:hover {
@@ -62,32 +79,31 @@
 .darkModeToggle {
     background: none;
     border: none;
-    font-size: 20px;
-    /* Increase size */
+    font-size: 22px;
     cursor: pointer;
     color: var(--text-color);
-    margin-left: 15px;
-    /* Add spacing */
+    transition: transform 0.2s ease-in-out;
+}
+
+.darkModeToggle:hover {
+    transform: scale(1.1);
 }
 
 /* Hamburger Icon */
 .hamburger {
     display: none;
-    font-size: 28px;
+    font-size: 30px;
     cursor: pointer;
     color: var(--text-color);
     background: none;
     border: none;
-    position: absolute;
-    right: 15px;
-    /* Adjust position */
+    z-index: 1100;
 }
 
 /* Responsive Menu */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
-        /* Ensure it's visible */
     }
 
     .navLinks {
@@ -96,15 +112,16 @@
         position: absolute;
         top: 60px;
         right: 0;
-        width: 200px;
+        width: 250px;
         background: var(--bg-color);
-        box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.1);
         padding: 20px;
         gap: 15px;
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
         opacity: 0;
         visibility: hidden;
+        border-radius: 10px 0 0 10px;
     }
 
     .navLinks.open {
@@ -113,10 +130,8 @@
         visibility: visible;
     }
 
-    /* Ensure dark mode toggle is visible in mobile */
     .darkModeToggle {
-        display: block;
         font-size: 24px;
-        margin-top: 10px;
+        margin-top: 15px;
     }
 }
