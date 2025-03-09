@@ -14,14 +14,14 @@ const Contact = () => {
                     <h2>Get in Touch</h2>
                     <p>
                         <FaPhone aria-label="Phone" />{" "}
-                        <a href="tel:+1234567890">+123 456 7890</a>
+                        <a href="tel:+1234567890">+977-970-7501118</a>
                     </p>
                     <p>
                         <FaEnvelope aria-label="Email" />{" "}
                         <a href="mailto:contact@mahateam.com">contact@mahateam.com</a>
                     </p>
                     <p>
-                        <FaMapMarkerAlt aria-label="Location" /> 123 Digital Ave, City, Country
+                        <FaMapMarkerAlt aria-label="Location" /> <a>Kathmandu, Nepal</a>
                     </p>
 
                     <h3>Follow Us</h3>
