@@ -1,26 +1,26 @@
 import styles from "../styles/WhyChooseUs.module.css";
-import { FaRocket, FaUsers, FaLightbulb, FaChartBar } from "react-icons/fa";
+import { FaRocket, FaChartLine, FaTools, FaHandshake } from "react-icons/fa";
 
 const sellingPoints = [
     {
         icon: <FaRocket />,
-        title: "Proven Results",
-        description: "We focus on strategies that deliver measurable growth and ROI.",
+        title: "E-Commerce Growth Experts",
+        description: "We specialize in scaling Shopify and e-commerce brands with proven strategies that maximize conversions and revenue.",
     },
     {
-        icon: <FaUsers />,
-        title: "Client-Centric Approach",
-        description: "Your success is our priority. We tailor solutions to fit your needs.",
+        icon: <FaChartLine />,
+        title: "Data-Driven Performance",
+        description: "Our decisions are backed by in-depth analytics, market trends, and AI-driven insights to ensure measurable success.",
     },
     {
-        icon: <FaLightbulb />,
-        title: "Innovative Strategies",
-        description: "We stay ahead of trends to ensure your business remains competitive.",
+        icon: <FaTools />,
+        title: "Seamless Integrations",
+        description: "We connect your store with Amazon, eBay, TikTok Shop, and Meta, unlocking multiple revenue streams effortlessly.",
     },
     {
-        icon: <FaChartBar />,
-        title: "Data-Driven Decisions",
-        description: "Our strategies are backed by analytics and real-time insights.",
+        icon: <FaHandshake />,
+        title: "Long-Term Partnerships",
+        description: "We don’t just build stores; we build relationships. Our goal is to help your business scale sustainably for the long run.",
     },
 ];
 
@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
     return (
         <section className={styles.whyChooseUs}>
             <h2>Why Choose Mahateam?</h2>
-            <p>We combine expertise, creativity, and data-driven strategies to help your business grow.</p>
+            <p>We drive e-commerce success with expert strategies, powerful integrations, and a commitment to long-term growth.</p>
 
             <div className={styles.pointsGrid}>
                 {sellingPoints.map((point, index) => (

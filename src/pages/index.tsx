@@ -11,7 +11,7 @@ export default function Home() {
             <Hero />
             <ServicesOverview />
             <Testimonials />
-            <CaseStudies />
+            {/* <CaseStudies /> */}
             <WhyChooseUs />
             <FinalCTA />
             {/* Other sections will go here */}

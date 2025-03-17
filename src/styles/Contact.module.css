@@ -1,8 +1,11 @@
+/* Contact Page */
 .contactPage {
     text-align: center;
     padding: 80px 20px;
+    background: #f9f9f9;
 }
 
+/* Contact Container */
 .contactContainer {
     display: flex;
     flex-wrap: wrap;
@@ -11,45 +14,67 @@
     margin-top: 40px;
 }
 
+/* Contact Details Box */
 .contactDetails {
     flex: 1;
     min-width: 300px;
     text-align: left;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Heading */
 .contactDetails h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
+    color: #333;
 }
 
+/* Contact Info */
 .contactDetails p {
     font-size: 1rem;
     margin: 10px 0;
     display: flex;
     align-items: center;
+    color: #555;
 }
 
+/* Contact Links */
 .contactDetails p a {
     margin-left: 10px;
     text-decoration: none;
-    color: var(--primary-color);
+    color: #008060;
+    /* Shopify Green */
+    font-weight: bold;
 }
 
+.contactDetails p a:hover {
+    color: #00a878;
+    /* Brighter Shopify Green */
+}
+
+/* Social Icons */
 .socialIcons {
     display: flex;
     gap: 15px;
+    margin-top: 15px;
 }
 
 .socialIcons a {
     font-size: 1.5rem;
-    color: var(--primary-color);
-    transition: color 0.3s;
+    color: #008060;
+    /* Shopify Green */
+    transition: color 0.3s ease-in-out;
 }
 
 .socialIcons a:hover {
-    color: var(--secondary-color);
+    color: #00a878;
+    /* Brighter Shopify Green */
 }
 
+/* Map Container */
 .mapContainer {
     margin-top: 40px;
 }
@@ -60,6 +85,19 @@
     color: white;
 }
 
+.dark .contactDetails {
+    background: #112240;
+    color: white;
+}
+
 .dark .contactDetails p a {
     color: #00bcd4;
+}
+
+.dark .socialIcons a {
+    color: #00bcd4;
+}
+
+.dark .socialIcons a:hover {
+    color: #0097a7;
 }

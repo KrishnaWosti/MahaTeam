@@ -5,10 +5,10 @@ const FinalCTA = () => {
     return (
         <section className={styles.finalCTA}>
             <div className={styles.ctaContent}>
-                <h2>Let's Elevate Your Business to the Next Level</h2>
-                <p>Boost your online presence with expert marketing solutions tailored to your needs.</p>
-                <Link href="/contact" className={styles.ctaButton} aria-label="Get a Free Consultation">
-                    Get a Free Consultation
+                <h2>Scale Your Business with Proven Strategies</h2>
+                <p>From seamless Shopify integrations to high-converting websites, we help businesses grow and maximize revenue.</p>
+                <Link href="https://calendly.com/wostikrishna58/30min" className={styles.ctaButton} aria-label="Get a Free Consultation">
+                    Claim Your Free Consultation
                 </Link>
             </div>
         </section>

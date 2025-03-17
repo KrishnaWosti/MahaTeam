@@ -1,22 +1,20 @@
+/* Success Stories Section */
 .caseStudies {
     text-align: center;
     padding: 80px 20px;
-    background: var(--case-bg);
-    color: var(--case-text);
-    transition: background 0.3s, color 0.3s;
+    background: linear-gradient(to right, #fef3f7, #ffffff);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .caseStudies h2 {
     font-size: 2.2rem;
+    font-weight: 700;
+    color: #333;
     margin-bottom: 20px;
 }
 
-.caseStudies p {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-}
-
-/* Grid Layout for Case Studies */
+/* Grid Layout */
 .caseGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -25,54 +23,82 @@
     margin: 0 auto;
 }
 
-/* Individual Case Study Card */
+/* Individual Case Card */
 .caseCard {
-    background: var(--card-bg);
-    color: var(--card-text);
+    background: white;
+    border-radius: 12px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
-    /* Centering content */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    text-align: left;
 }
 
 .caseCard:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Image inside Case Study Card */
-.caseImage {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
+/* Case Study Icon */
+.caseIcon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
 }
 
-/* Buttons: Remove underline & align properly */
-.viewCase,
-.viewAll {
-    background: var(--button-bg);
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
+/* Case Study Text */
+.caseCard h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.caseCard p {
     font-size: 1rem;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.3s;
-    border-radius: 5px;
-    text-decoration: none;
-    /* Remove underline */
-    display: inline-block;
-    /* Prevents full-width link behavior */
-    text-align: center;
+    color: #444;
+    line-height: 1.6;
 }
 
-.viewCase:hover,
+/* View Case Study Button */
+.viewCase {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.viewCase:hover {
+    color: #0056b3;
+}
+
+/* View All Button */
+.viewAll {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
 .viewAll:hover {
-    background: var(--button-hover);
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .caseStudies {
+        padding: 60px 15px;
+    }
+
+    .caseStudies h2 {
+        font-size: 1.8rem;
+    }
+
+    .caseGrid {
+        grid-template-columns: 1fr;
+    }
 }

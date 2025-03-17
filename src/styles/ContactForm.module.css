@@ -1,7 +1,8 @@
+/* Contact Form */
 .contactForm {
     flex: 1;
     min-width: 300px;
-    background: var(--form-bg);
+    background: #f9f9f9;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -10,43 +11,62 @@
 .contactForm h2 {
     font-size: 1.5rem;
     margin-bottom: 15px;
+    color: #333;
 }
 
+/* Input Fields */
 .contactForm input,
 .contactForm textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 10px;
-    border: 1px solid var(--form-border);
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background: var(--form-input-bg);
-    color: var(--form-text);
+    background: #fff;
+    color: #333;
+    font-size: 1rem;
+    transition: border 0.3s;
 }
 
+.contactForm input:focus,
+.contactForm textarea:focus {
+    border-color: #008060;
+    /* Shopify Green */
+    outline: none;
+}
+
+/* Submit Button */
 .contactForm button {
     width: 100%;
     padding: 12px;
     font-size: 1rem;
-    color: rgb(255, 255, 255);
+    font-weight: bold;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
-    background-color: rgb(56, 56, 56);
+    transition: 0.3s;
+    background: #008060;
+    /* Shopify Green */
 }
 
 .contactForm button:hover {
-    background: var(--btn-hover);
+    background: #00a878;
+    /* Brighter Shopify Green */
 }
 
+/* Success & Error Messages */
 .success {
-    color: green;
+    color: #008060;
+    /* Shopify Green */
     margin-top: 10px;
+    font-weight: bold;
 }
 
 .error {
     color: red;
     margin-top: 10px;
+    font-weight: bold;
 }
 
 /* Dark Mode */

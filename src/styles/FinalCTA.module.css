@@ -1,32 +1,65 @@
+/* Final Call to Action Section */
 .finalCTA {
+    background: whitesmoke;
+    /* Dark Shopify-styled background */
+    color: black;
     text-align: center;
-    padding: 80px 20px;
-    background: var(--cta-bg);
-    color: var(--cta-text);
-    transition: background 0.3s, color 0.3s;
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* CTA Content */
 .ctaContent h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .ctaContent p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    color: black;
 }
 
+/* CTA Button */
 .ctaButton {
-    background: var(--cta-btn-bg);
-    color: #fff;
-    padding: 15px 30px;
+    background: #008060;
+    /* Shopify green */
+    color: white;
+    padding: 16px 32px;
     font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    display: inline-block;
 }
 
 .ctaButton:hover {
-    background: var(--cta-btn-hover);
+    background: #00674a;
+    /* Darker Shopify green */
+    transform: scale(1.05);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .finalCTA {
+        padding: 50px 15px;
+    }
+
+    .ctaContent h2 {
+        font-size: 1.8rem;
+    }
+
+    .ctaContent p {
+        font-size: 1rem;
+    }
+
+    .ctaButton {
+        padding: 14px 28px;
+        font-size: 1.1rem;
+    }
 }

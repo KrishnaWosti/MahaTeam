@@ -1,38 +1,55 @@
+import { useEffect, useState } from "react";
 import styles from "../styles/Testimonials.module.css";
 
-const testimonials = [
-    {
-        name: "John Doe",
-        designation: "CEO, Tech Startup",
-        review: "Mahateam transformed our online presence and boosted our conversions by 200%. Highly recommended!",
-    },
-    {
-        name: "Sarah Johnson",
-        designation: "Marketing Director",
-        review: "The SEO and ads strategy from Mahateam brought in more leads than we ever expected!",
-    },
-    {
-        name: "Michael Lee",
-        designation: "Founder, E-Commerce Brand",
-        review: "Outstanding service! The team is professional, skilled, and results-driven.",
-    },
-];
+interface Review {
+    customerName: string;
+    stars: number;
+    text: string;
+}
 
 const Testimonials = () => {
+    const [reviews, setReviews] = useState<Review[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchReviews = async () => {
+            try {
+                const response = await fetch("/api/trustpilot-reviews");
+                const data = await response.json();
+                setReviews(data.reviews);
+            } catch (error) {
+                console.error("Error fetching Trustpilot reviews:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchReviews();
+    }, []);
+
     return (
         <section className={styles.testimonials} aria-labelledby="testimonials-heading">
-            <h2 id="testimonials-heading">What Our Clients Say</h2>
-            <div className={styles.testimonialGrid}>
-                {testimonials.map((testimonial) => (
-                    <div key={testimonial.name} className={styles.testimonialCard}>
-                        <blockquote className={styles.review}>
-                            &ldquo;{testimonial.review}&rdquo;
-                        </blockquote>
-                        <h4 className={styles.name}>{testimonial.name}</h4>
-                        <p className={styles.designation}>{testimonial.designation}</p>
-                    </div>
-                ))}
-            </div>
+            <h2 id="testimonials-heading">Trust Is Everything</h2>
+
+            {loading ? (
+                <p>Loading reviews...</p>
+            ) : (
+                <div className={styles.testimonialGrid}>
+                    {reviews.length > 0 ? (
+                        reviews.map((review, index) => (
+                            <div key={index} className={styles.testimonialCard}>
+                                <blockquote className={styles.review}>
+                                    &ldquo;{review.text}&rdquo;
+                                </blockquote>
+                                <h4 className={styles.name}>{review.customerName}</h4>
+                                <p className={styles.stars}>⭐ {review.stars}/5</p>
+                            </div>
+                        ))
+                    ) : (
+                        <p>No reviews available at the moment.</p>
+                    )}
+                </div>
+            )}
         </section>
     );
 };

@@ -70,9 +70,9 @@ const Navbar = () => {
                         <Link href="/contact" onClick={toggleMenu}>Contact</Link>
                     </li>
                     <li>
-                        <button className={styles.darkModeToggle} onClick={toggleDarkMode}>
+                        {/* <button className={styles.darkModeToggle} onClick={toggleDarkMode}>
                             {darkMode ? "🌙" : "☀️"}
-                        </button>
+                        </button> */}
                     </li>
                 </ul>
             </div>
