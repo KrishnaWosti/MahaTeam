@@ -11,6 +11,9 @@ interface FormData {
     message: string;
 }
 
+// Initialize emailjs with your public key
+emailjs.init("vSFcHm8i4Q3l35FiI");
+
 const ContactForm = () => {
     const [formData, setFormData] = useState<FormData>({
         name: "",
@@ -76,17 +79,26 @@ const ContactForm = () => {
         setError("");
 
         try {
+            // Convert formData to a plain object that emailjs expects
+            const templateParams = {
+                from_name: formData.name,
+                reply_to: formData.email,
+                subject: formData.subject,
+                message: formData.message,
+            };
+
             await emailjs.send(
                 "service_yzn1v59",
                 "template_69ts6ow",
-                formData,
-                "wostikrishna58@gmail.com"
+                templateParams
             );
+
             setSuccess(true);
             setFormData({ name: "", email: "", subject: "", message: "" });
             setTouched({});
         } catch (err) {
             setError("Failed to send message. Please try again later.");
+            console.error("EmailJS Error:", err);
         }
 
         setIsSubmitting(false);
