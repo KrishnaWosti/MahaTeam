@@ -1,0 +1,454 @@
+/* Blog Page Container */
+.blogPage {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    background: #f5f8f7;
+}
+
+/* Blog Header */
+.blogHeader {
+    text-align: center;
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.blogHeader::after {
+    content: '';
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(0, 128, 96, 0.2) 0%, rgba(0, 166, 124, 0.2) 100%);
+    border-radius: 2px;
+}
+
+.blogHeader h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: #006048;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.blogHeader p {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    color: #4a5568;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Featured Posts Section */
+.featuredPosts {
+    margin-bottom: 6rem;
+}
+
+.featuredPosts h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.featuredGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.featuredPost {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 128, 96, 0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    text-decoration: none !important;
+}
+
+.featuredPost a {
+    text-decoration: none !important;
+}
+
+.featuredPost:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 128, 96, 0.12);
+}
+
+.featuredImage {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.featuredImage img {
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.featuredPost:hover .featuredImage img {
+    transform: scale(1.05);
+}
+
+.featuredContent {
+    padding: 2.5rem;
+    background: #ffffff;
+}
+
+.featuredContent h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    color: #2c3e50;
+    transition: color 0.3s ease;
+    text-decoration: none !important;
+}
+
+.featuredPost:hover .featuredContent h3 {
+    color: #008060;
+}
+
+.featuredContent p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Filter Section */
+.filterSection {
+    margin-bottom: 5rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 128, 96, 0.08);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchBar {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    max-width: 500px;
+}
+
+.searchBar svg {
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #008060;
+    font-size: 1.2rem;
+}
+
+.searchBar input {
+    width: 100%;
+    padding: 1.2rem 1.2rem 1.2rem 3.2rem;
+    border: 2px solid rgba(0, 128, 96, 0.1);
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #f5f8f7;
+    transition: all 0.3s ease;
+}
+
+.searchBar input:focus {
+    outline: none;
+    border-color: #008060;
+    box-shadow: 0 0 0 4px rgba(0, 128, 96, 0.1);
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.categoryButton {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgba(0, 128, 96, 0.1);
+    border-radius: 12px;
+    background: #ffffff;
+    color: #4a5568;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.categoryButton:hover {
+    border-color: #008060;
+    color: #008060;
+    transform: translateY(-2px);
+}
+
+.categoryButton.active {
+    background: #e6f3f0;
+    color: #008060;
+    border-color: #008060;
+}
+
+/* All Posts Grid */
+.allPosts {
+    margin-bottom: 4rem;
+}
+
+.allPosts h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.postsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.blogPost {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 128, 96, 0.08);
+    transition: all 0.4s ease;
+    text-decoration: none !important;
+}
+
+.blogPost a {
+    text-decoration: none !important;
+}
+
+.blogPost:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 128, 96, 0.12);
+}
+
+.postImage {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.postImage img {
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.blogPost:hover .postImage img {
+    transform: scale(1.05);
+}
+
+.postContent {
+    padding: 2rem;
+    background: #ffffff;
+}
+
+.postContent h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    color: #2c3e50;
+    transition: color 0.3s ease;
+    text-decoration: none !important;
+}
+
+.blogPost:hover .postContent h3 {
+    color: #008060;
+}
+
+.postContent p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.category {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: #e6f3f0;
+    color: #008060;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-decoration: none !important;
+}
+
+.postMeta {
+    display: flex;
+    gap: 1.5rem;
+    color: #4a5568;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+.postMeta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.postMeta svg {
+    color: #008060;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .featuredGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .featuredImage {
+        height: 400px;
+    }
+
+    .postsGrid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .blogPage {
+        padding: 4rem 1.5rem;
+    }
+
+    .blogHeader {
+        margin-bottom: 4rem;
+    }
+
+    .filterSection {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .searchBar {
+        width: 100%;
+        max-width: none;
+    }
+
+    .categories {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .featuredImage {
+        height: 300px;
+    }
+
+    .postImage {
+        height: 200px;
+    }
+
+    .featuredContent,
+    .postContent {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blogHeader h1 {
+        font-size: 2rem;
+    }
+
+    .featuredImage {
+        height: 250px;
+    }
+
+    .postImage {
+        height: 180px;
+    }
+
+    .postMeta {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .categoryButton {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Dark Mode Styles */
+:global(.dark) .blogPage {
+    background: linear-gradient(to bottom, #1a1a1a 0%, #111111 100%);
+}
+
+:global(.dark) .blogHeader h1 {
+    background: linear-gradient(135deg, #00a67c 0%, #008060 100%);
+    -webkit-background-clip: text;
+}
+
+:global(.dark) .blogHeader p {
+    color: #9ca3af;
+}
+
+:global(.dark) .featuredPost,
+:global(.dark) .blogPost {
+    background: #1f2937;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+:global(.dark) .featuredContent,
+:global(.dark) .postContent {
+    background: linear-gradient(to bottom, #1f2937 0%, #111827 100%);
+}
+
+:global(.dark) .featuredContent h3,
+:global(.dark) .postContent h3 {
+    color: #f3f4f6;
+}
+
+:global(.dark) .featuredContent p,
+:global(.dark) .postContent p {
+    color: #9ca3af;
+}
+
+:global(.dark) .category {
+    background: rgba(0, 128, 96, 0.2);
+}
+
+:global(.dark) .postMeta {
+    color: #9ca3af;
+}
+
+:global(.dark) .filterSection {
+    background: #1f2937;
+}
+
+:global(.dark) .searchBar input {
+    background: #111827;
+    border-color: #374151;
+    color: #f3f4f6;
+}
+
+:global(.dark) .categoryButton {
+    background: #111827;
+    border-color: #374151;
+    color: #9ca3af;
+}
+
+:global(.dark) .categoryButton:hover {
+    border-color: #00a67c;
+    color: #00a67c;
+}
+
+:global(.dark) .categoryButton.active {
+    background: #008060;
+    color: white;
+    border-color: #008060;
+}

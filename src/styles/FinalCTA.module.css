@@ -1,65 +1,229 @@
 /* Final Call to Action Section */
 .finalCTA {
-    background: whitesmoke;
-    /* Dark Shopify-styled background */
-    color: black;
-    text-align: center;
-    padding: 60px 20px;
-    border-radius: 10px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #f8fafb 0%, #f1fdf7 100%);
+    color: rgb(0, 0, 0);
+    padding: 8rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.finalCTA::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/grid-pattern.svg') repeat;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
 }
 
 /* CTA Content */
+.ctaContent {
+    text-align: left;
+}
+
 .ctaContent h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 15px;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #000000 0%, #acd1b1 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
 }
 
 .ctaContent p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 25px auto;
-    color: black;
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    line-height: 1.6;
+    color: #3d413f;
+    margin-bottom: 2.5rem;
+    max-width: 540px;
 }
 
-/* CTA Button */
-.ctaButton {
+/* CTA Buttons */
+.ctaButtons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.primaryButton {
     background: #008060;
-    /* Shopify green */
-    color: white;
-    padding: 16px 32px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: 0.3s ease-in-out;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.ctaButton:hover {
-    background: #00674a;
-    /* Darker Shopify green */
-    transform: scale(1.05);
+.primaryButton a {
+    color: white;
+    text-decoration: none;
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    white-space: nowrap;
+}
+
+.arrow {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.videoButton {
+    background: transparent;
+    border: 2px solid rgba(11, 121, 136, 0.1);
+    color: rgb(80, 68, 68);
+    padding: 1.2rem 2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.videoButton:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Video Section */
+.videoSection {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    aspect-ratio: 16/9;
+}
+
+.videoWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.videoPlaceholder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.videoPlaceholder:hover .thumbnail {
+    opacity: 0.5;
+}
+
+.playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    backdrop-filter: blur(4px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Mobile Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .finalCTA {
-        padding: 50px 15px;
+        padding: 6rem 2rem;
     }
 
-    .ctaContent h2 {
-        font-size: 1.8rem;
+    .container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .ctaContent {
+        text-align: center;
     }
 
     .ctaContent p {
-        font-size: 1rem;
+        margin: 0 auto 2.5rem;
     }
 
-    .ctaButton {
-        padding: 14px 28px;
+    .ctaButtons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .finalCTA {
+        padding: 5rem 1.5rem;
+    }
+
+    .ctaContent h2 {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+
+    .ctaContent p {
         font-size: 1.1rem;
+    }
+
+    .ctaButtons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .primaryButton a,
+    .videoButton {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .finalCTA {
+        padding: 4rem 1rem;
+    }
+
+    .playButton {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
     }
 }

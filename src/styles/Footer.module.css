@@ -1,60 +1,61 @@
 /* Footer Section */
 .footer {
-    background: white;
-    color: black;
-    padding: 50px 20px;
-    text-align: center;
+    background: #f8fafc;
+    color: #1a1a1a;
+    padding: 5rem 2rem 2rem;
+    position: relative;
 }
 
 .footerContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
 }
 
-/* Left Section - Logo & Description */
+/* Company Info Section */
 .footerLeft {
-    flex: 1;
-    min-width: 250px;
-    text-align: left;
+    max-width: 400px;
 }
 
-.footerLeft h2 {
-    font-size: 1.8rem;
-    margin-bottom: 12px;
-    color: #008060;
-    /* Shopify Green */
+.companyInfo p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-top: 1.5rem;
 }
 
-.footerLeft p {
-    font-size: 1rem;
-    color: black;
-    max-width: 300px;
-}
-
-/* Middle Section - Quick Links & Contact */
-.footerMiddle {
+.footerLogo {
     display: flex;
-    flex: 2;
-    justify-content: space-between;
-    gap: 50px;
-    min-width: 300px;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #008060;
+    text-decoration: none;
 }
 
-/* Quick Links */
-.footerLinks {
-    flex: 1;
-    text-align: left;
+.footerLogo svg {
+    font-size: 2rem;
+}
+
+.footerLogo span {
+    color: #1a1a1a;
+}
+
+/* Middle Section */
+.footerMiddle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
 .footerLinks h3,
 .footerContact h3 {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
 }
 
 .footerLinks ul {
@@ -64,97 +65,148 @@
 }
 
 .footerLinks li {
-    margin-bottom: 8px;
+    margin-bottom: 0.75rem;
 }
 
-.footerLinks a,
-.footerContact a {
-    color: #008060;
-    /* Shopify Green */
+.footerLinks a {
+    color: #4b5563;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
 }
 
-.footerLinks a:hover,
-.footerContact a:hover {
-    color: #00a878;
-    /* Brighter Shopify Green */
+.footerLinks a:hover {
+    color: #008060;
 }
 
 /* Contact Section */
-.footerContact {
-    flex: 1;
-    text-align: left;
+.footerContact p {
+    color: #4b5563;
+    margin-bottom: 1.25rem;
 }
 
-/* Right Section - Social Icons */
-.footerRight {
-    flex: 1;
-    min-width: 250px;
-    text-align: right;
+.contactButton {
+    display: inline-block;
+    background: #008060;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
 }
 
-.footerRight h3 {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
+.contactButton:hover {
+    background: #006048;
+    transform: translateY(-2px);
 }
 
-/* Social Icons */
+.contactInfo {
+    margin-top: 1.5rem;
+}
+
+.contactInfo p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.contactInfo a {
+    color: #008060;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contactInfo a:hover {
+    color: #006048;
+}
+
+/* Bottom Section */
+.footerBottom {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.bottomContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.legal {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: #4b5563;
+    font-size: 0.9rem;
+}
+
+.legal a {
+    color: #4b5563;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal a:hover {
+    color: #008060;
+}
+
 .socialIcons {
     display: flex;
-    justify-content: center;
-    gap: 12px;
-    padding-left: 220px;
+    gap: 1.25rem;
 }
 
 .socialIcons a {
-    color: #008060;
-    /* Shopify Green */
-    font-size: 1.5rem;
-    transition: 0.3s;
+    color: #4b5563;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
 }
 
 .socialIcons a:hover {
-    color: #00a878;
-    /* Brighter Shopify Green */
-    transform: scale(1.1);
-}
-
-/* Footer Bottom */
-.footerBottom {
-    margin-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 15px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #ccc;
+    color: #008060;
+    transform: translateY(-2px);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .footerContainer {
-        flex-direction: column;
-        text-align: center;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .footerLeft {
+        max-width: 100%;
     }
 
     .footerMiddle {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-        text-align: left;
-        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 1.5rem 1.5rem;
     }
 
-    .footerLinks,
-    .footerContact {
-        flex: 1;
-        min-width: 45%;
+    .footerMiddle {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
-    .footerRight {
+    .bottomContent {
+        flex-direction: column;
         text-align: center;
+        gap: 1.5rem;
+    }
+
+    .legal {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .socialIcons {

@@ -1,103 +1,220 @@
 /* Contact Page */
 .contactPage {
+    padding: 6rem 2rem;
+    background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%);
+    min-height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Contact Header */
+.contactHeader {
     text-align: center;
-    padding: 80px 20px;
-    background: #f9f9f9;
+    margin-bottom: 4rem;
+}
+
+.contactHeader h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.contactHeader p {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    color: #4b5563;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* Contact Container */
 .contactContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
 }
 
-/* Contact Details Box */
+/* Contact Details */
 .contactDetails {
-    flex: 1;
-    min-width: 300px;
-    text-align: left;
     background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Heading */
 .contactDetails h2 {
     font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #333;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
 }
 
-/* Contact Info */
-.contactDetails p {
-    font-size: 1rem;
-    margin: 10px 0;
+/* Contact Info Items */
+.contactInfo {
     display: flex;
-    align-items: center;
-    color: #555;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
-/* Contact Links */
-.contactDetails p a {
-    margin-left: 10px;
-    text-decoration: none;
+.infoItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.infoItem svg {
+    font-size: 1.5rem;
     color: #008060;
-    /* Shopify Green */
-    font-weight: bold;
+    margin-top: 0.25rem;
 }
 
-.contactDetails p a:hover {
-    color: #00a878;
-    /* Brighter Shopify Green */
+.infoItem div h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
 }
 
-/* Social Icons */
+.infoItem div a,
+.infoItem div p {
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.infoItem div a:hover {
+    color: #008060;
+}
+
+/* Social Section */
+.socialSection {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.socialSection h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.socialSection p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
 .socialIcons {
     display: flex;
-    gap: 15px;
-    margin-top: 15px;
+    gap: 1.25rem;
 }
 
 .socialIcons a {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f3f4f6;
     color: #008060;
-    /* Shopify Green */
-    transition: color 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .socialIcons a:hover {
-    color: #00a878;
-    /* Brighter Shopify Green */
+    background: #008060;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.socialIcons svg {
+    font-size: 1.2rem;
 }
 
 /* Map Container */
 .mapContainer {
-    margin-top: 40px;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contactContainer {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contactDetails {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactPage {
+        padding: 4rem 1.5rem;
+    }
+
+    .contactHeader {
+        margin-bottom: 3rem;
+    }
+
+    .contactDetails {
+        padding: 1.5rem;
+    }
+
+    .socialIcons {
+        justify-content: center;
+    }
 }
 
 /* Dark Mode */
-.dark .contactPage {
-    background: #0a192f;
-    color: white;
+:global(.dark) .contactPage {
+    background: linear-gradient(to bottom, #0a192f 0%, #112240 100%);
 }
 
-.dark .contactDetails {
+:global(.dark) .contactHeader h1 {
+    background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+:global(.dark) .contactHeader p {
+    color: #a3a8b8;
+}
+
+:global(.dark) .contactDetails {
     background: #112240;
-    color: white;
 }
 
-.dark .contactDetails p a {
+:global(.dark) .contactDetails h2,
+:global(.dark) .infoItem div h3,
+:global(.dark) .socialSection h3 {
+    color: #ffffff;
+}
+
+:global(.dark) .infoItem div a,
+:global(.dark) .infoItem div p,
+:global(.dark) .socialSection p {
+    color: #a3a8b8;
+}
+
+:global(.dark) .socialIcons a {
+    background: #1a2b4c;
     color: #00bcd4;
 }
 
-.dark .socialIcons a {
-    color: #00bcd4;
-}
-
-.dark .socialIcons a:hover {
-    color: #0097a7;
+:global(.dark) .socialIcons a:hover {
+    background: #00bcd4;
+    color: #ffffff;
 }

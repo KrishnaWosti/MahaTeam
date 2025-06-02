@@ -1,0 +1,312 @@
+.careersPage {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #008060 0%, #004d3d 100%);
+    color: white;
+    margin: 0;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Values Section */
+.values {
+    padding: 6rem 2rem;
+    background: #fff;
+}
+
+.values h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.valueCard {
+    background: #f8f9fa;
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valueCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    font-size: 3rem;
+    color: #008060;
+    margin-bottom: 1.5rem;
+}
+
+.valueCard h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.valueCard p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Openings Section */
+.openings {
+    padding: 6rem 2rem;
+    background: #f8f9fa;
+}
+
+.openings h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.noOpenings {
+    text-align: center;
+    padding: 3rem;
+    background: #fff;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.noOpenings p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Submit Resume Section */
+.submitResume {
+    padding: 6rem 2rem;
+    background: #fff;
+}
+
+.submitResume h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.formGroup {
+    margin-bottom: 2rem;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #008060;
+    box-shadow: 0 0 0 3px rgba(0, 128, 96, 0.1);
+}
+
+.fileInput {
+    display: block;
+    position: relative;
+    padding: 2rem;
+    background: #fff;
+    border: 2px dashed #008060;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fileInput:hover {
+    background: rgba(0, 128, 96, 0.05);
+}
+
+.fileInput input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.fileInput span {
+    color: #008060;
+    font-weight: 500;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 1.2rem;
+    background: #008060;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover {
+    background: #006048;
+    transform: translateY(-2px);
+}
+
+.success {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    background: #d4edda;
+    color: #155724;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.error {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    background: #f8d7da;
+    color: #721c24;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .values,
+    .openings,
+    .submitResume {
+        padding: 4rem 1rem;
+    }
+
+    .values h2,
+    .openings h2,
+    .submitResume h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .form {
+        padding: 2rem 1.5rem;
+    }
+
+    .valueCard {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+
+    .valueCard,
+    .form {
+        background: #1a1a1a;
+    }
+
+    .valueCard h3 {
+        color: #fff;
+    }
+
+    .valueCard p {
+        color: #bbb;
+    }
+
+    .values h2,
+    .openings h2,
+    .submitResume h2 {
+        color: #fff;
+    }
+
+    .noOpenings {
+        background: #222;
+    }
+
+    .noOpenings p {
+        color: #bbb;
+    }
+
+    .formGroup input,
+    .formGroup select,
+    .formGroup textarea {
+        background: #222;
+        border-color: #333;
+        color: #fff;
+    }
+
+    .fileInput {
+        background: #222;
+        border-color: #333;
+        color: #bbb;
+    }
+
+    .success {
+        background: #1e4620;
+        color: #d4edda;
+    }
+
+    .error {
+        background: #471b1e;
+        color: #f8d7da;
+    }
+}

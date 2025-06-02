@@ -1,0 +1,135 @@
+/* About Page Container */
+.aboutPage {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+    color: #1a1a1a;
+}
+
+/* Founder Section */
+.founderSection {
+    padding: 8rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.founderGrid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+.founderImage {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.founderImage:hover {
+    transform: translateY(-10px);
+}
+
+.socialLinks {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.socialLinks a {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.socialLinks a:hover {
+    transform: translateY(-5px);
+}
+
+.founderInfo {
+    padding-top: 2rem;
+}
+
+.founderInfo h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #008060 0%, #00bcd4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.founderInfo h3 {
+    font-size: 1.5rem;
+    color: #4b5563;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.story {
+    margin-bottom: 2rem;
+}
+
+.story p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .founderGrid {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .founderGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .founderImage {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .founderSection {
+        padding: 4rem 1.5rem;
+    }
+
+    .founderInfo h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Dark Mode Styles */
+:global(.dark) .aboutPage {
+    background: linear-gradient(to bottom, #1a1a1a 0%, #111827 100%);
+    color: #ffffff;
+}
+
+:global(.dark) .founderInfo h2 {
+    background: linear-gradient(135deg, #00bcd4 0%, #008060 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+:global(.dark) .founderInfo h3 {
+    color: #9ca3af;
+}
+
+:global(.dark) .story p {
+    color: #d1d5db;
+}

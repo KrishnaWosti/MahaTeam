@@ -1,94 +1,424 @@
 .hero {
+    position: relative;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    overflow: hidden;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    height: 90vh;
-    background: linear-gradient(to right, #f1fdf7, #ffffff);
-    /* Shopify-inspired light green gradient */
-    padding: 20px;
+}
+
+.heroContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
 }
 
 .heroContent {
-    max-width: 800px;
-    padding: 20px;
+    position: relative;
+    z-index: 2;
 }
 
-/* Headings */
-.hero h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
+.heroText h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
     color: #1a1a1a;
-    /* Darker for contrast */
-    margin-bottom: 15px;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    color: #444;
-    margin-bottom: 25px;
+.highlight {
+    color: #008060;
+    position: relative;
+    display: inline-block;
 }
 
-/* Call-to-action button */
-.ctaButton {
-    background-color: #008060;
-    /* Shopify green */
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 12px 28px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0, 128, 96, 0.1);
+    z-index: -1;
 }
 
-.ctaButton:hover {
-    background-color: #006E52;
-    /* Darker Shopify green */
-    transform: translateY(-3px);
+.heroText p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    max-width: 540px;
 }
 
-/* Icons section */
-.iconContainer {
+.ctaGroup {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.primaryCta,
+.secondaryCta {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.875rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.primaryCta {
+    background: #008060;
+    color: white;
+    gap: 0.5rem;
+}
+
+.primaryCta:hover {
+    background: #006048;
+    transform: translateY(-2px);
+}
+
+.secondaryCta {
+    border: 2px solid #008060;
+    color: #008060;
+}
+
+.secondaryCta:hover {
+    background: rgba(0, 128, 96, 0.1);
+    transform: translateY(-2px);
+}
+
+.arrowIcon {
+    transition: transform 0.3s ease;
+}
+
+.primaryCta:hover .arrowIcon {
+    transform: translateX(4px);
+}
+
+/* Stats Section */
+.statsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.statNumber {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #008060;
+}
+
+.statLabel {
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+/* Visual Section */
+.heroVisual {
+    position: relative;
+}
+
+.visualContainer {
+    position: relative;
+    z-index: 2;
+}
+
+.mainVisual {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mainVisual img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Floating Elements */
+.floatingElements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floatingCard {
+    position: absolute;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #1a1a1a;
+    animation: float 6s ease-in-out infinite;
+}
+
+.card1 {
+    top: -20px;
+    left: -40px;
+}
+
+.card2 {
+    bottom: 40px;
+    right: -20px;
+    animation-delay: 1s;
+}
+
+.card3 {
+    top: 40%;
+    left: -60px;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Trust Bar */
+.trustBar {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.trustBar p {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.trustLogos {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
+    align-items: center;
+    gap: 3rem;
+    opacity: 0.7;
+    flex-wrap: wrap;
+    padding: 0 1rem;
 }
 
-.icon {
-    font-size: 2.8rem;
-    color: #333;
-    transition: transform 0.3s ease, color 0.3s ease;
+.logoItem {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
 }
 
-.icon:hover {
-    transform: scale(1.2);
-    color: #008060;
-    /* Shopify green */
+.logoItem:hover {
+    opacity: 1;
 }
 
-/* Mobile Responsiveness */
+.platformLogo {
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.platformLogo:hover {
+    filter: grayscale(0%);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 5rem 2rem;
+    }
+
+    .heroContainer {
+        gap: 3rem;
+    }
+
+    .heroText h1 {
+        font-size: 2.75rem;
+    }
+
+    .mainVisual img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
-        height: 85vh;
-        padding: 15px;
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        min-height: calc(100vh - 70px);
     }
 
-    .hero h1 {
-        font-size: 2.2rem;
+    .heroContainer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
-    .hero p {
+    .heroContent {
+        order: 1;
+    }
+
+    .heroText {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .heroText h1 {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .heroText p {
+        font-size: 1.1rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .ctaGroup {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .primaryCta,
+    .secondaryCta {
+        padding: 0.625rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .statsContainer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
+        margin-top: 2rem;
+    }
+
+    .statNumber {
+        font-size: 1.5rem;
+    }
+
+    .statLabel {
+        font-size: 0.8rem;
+    }
+
+    .heroVisual {
+        order: 2;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mainVisual {
+        margin: 0 -1.5rem;
+        border-radius: 0;
+    }
+
+    .mainVisual img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .floatingElements {
+        display: none;
+    }
+
+    .trustBar {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+    }
+
+    .trustLogos {
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .logoItem {
+        height: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .heroText h1 {
+        font-size: 1.75rem;
+    }
+
+    .heroText p {
         font-size: 1rem;
     }
 
-    .ctaButton {
-        font-size: 1rem;
-        padding: 10px 20px;
+    .ctaGroup {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
     }
 
-    .icon {
-        font-size: 2.5rem;
+    .primaryCta,
+    .secondaryCta {
+        width: auto;
+        min-width: 200px;
+        max-width: 250px;
+        padding: 0.5rem 0.875rem;
+        font-size: 0.8125rem;
+    }
+
+    .statsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        row-gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .statItem {
+        padding: 0.5rem;
+    }
+
+    .mainVisual {
+        margin: 0 -1rem;
+    }
+
+    .mainVisual img {
+        max-height: 300px;
+    }
+
+    .trustLogos {
+        gap: 1.5rem;
     }
 }

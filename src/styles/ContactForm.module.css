@@ -1,91 +1,224 @@
 /* Contact Form */
 .contactForm {
-    flex: 1;
-    min-width: 300px;
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .contactForm h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #333;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+}
+
+.contactForm p {
+    color: #4b5563;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Form Groups */
+.formGroup {
+    margin-bottom: 1.5rem;
+    position: relative;
 }
 
 /* Input Fields */
-.contactForm input,
-.contactForm textarea {
+.formGroup input,
+.formGroup textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #fff;
-    color: #333;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    background: #f9fafb;
+    color: #1a1a1a;
     font-size: 1rem;
-    transition: border 0.3s;
+    transition: all 0.3s ease;
 }
 
-.contactForm input:focus,
-.contactForm textarea:focus {
+.formGroup input:focus,
+.formGroup textarea:focus {
     border-color: #008060;
-    /* Shopify Green */
+    background: #ffffff;
     outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 128, 96, 0.1);
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: #9ca3af;
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Error States */
+.formGroup input.error,
+.formGroup textarea.error {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+.formGroup input.error:focus,
+.formGroup textarea.error:focus {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.errorMessage {
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+    color: #ef4444;
+    font-size: 0.875rem;
 }
 
 /* Submit Button */
-.contactForm button {
+.submitButton {
     width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    font-weight: bold;
+    padding: 1rem;
+    background: #008060;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
-    background: #008060;
-    /* Shopify Green */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
 }
 
-.contactForm button:hover {
-    background: #00a878;
-    /* Brighter Shopify Green */
+.submitButton:hover {
+    background: #006048;
+    transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.submitIcon {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.submitButton:hover .submitIcon {
+    transform: translateX(4px);
 }
 
 /* Success & Error Messages */
+.success,
+.error {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+}
+
 .success {
-    color: #008060;
-    /* Shopify Green */
-    margin-top: 10px;
-    font-weight: bold;
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #dcfce7;
 }
 
 .error {
-    color: red;
-    margin-top: 10px;
-    font-weight: bold;
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fee2e2;
+}
+
+/* Loading State */
+.submitting {
+    position: relative;
+    overflow: hidden;
+}
+
+.submitting::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent 25%,
+            rgba(255, 255, 255, 0.2) 50%,
+            transparent 75%);
+    animation: loading 1.5s infinite linear;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(50%);
+    }
 }
 
 /* Dark Mode */
-.dark .contactForm {
+:global(.dark) .contactForm {
     background: #112240;
-    color: white;
 }
 
-.dark .contactForm input,
-.dark .contactForm textarea {
+:global(.dark) .contactForm h2 {
+    color: #ffffff;
+}
+
+:global(.dark) .contactForm p {
+    color: #a3a8b8;
+}
+
+:global(.dark) .formGroup input,
+:global(.dark) .formGroup textarea {
     background: #1a2b4c;
     border-color: #334c75;
-    color: white;
+    color: #ffffff;
 }
 
-.dark .contactForm button {
+:global(.dark) .formGroup input::placeholder,
+:global(.dark) .formGroup textarea::placeholder {
+    color: #64748b;
+}
+
+:global(.dark) .formGroup input:focus,
+:global(.dark) .formGroup textarea:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 0 4px rgba(0, 188, 212, 0.1);
+}
+
+:global(.dark) .submitButton {
     background: #00bcd4;
 }
 
-.dark .contactForm button:hover {
+:global(.dark) .submitButton:hover {
     background: #0097a7;
+}
+
+:global(.dark) .submitButton:disabled {
+    background: #334c75;
+}
+
+:global(.dark) .success {
+    background: #042f2e;
+    color: #6ee7b7;
+    border-color: #064e3b;
+}
+
+:global(.dark) .error {
+    background: #2c0a0a;
+    color: #fca5a5;
+    border-color: #450a0a;
 }
