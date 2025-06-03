@@ -27,7 +27,7 @@ const Hero = () => {
                                 Get Started
                                 <FaArrowRight className={styles.arrowIcon} />
                             </Link>
-                            <Link href="https://calendly.com/wostikrishna58/30min" className={styles.secondaryCta}>
+                            <Link href="https://calendly.com/kushal-mahateam/30min" className={styles.secondaryCta}>
                                 Book a Free Consultation
                             </Link>
                         </div>
