@@ -12,7 +12,7 @@ const blogPosts = [
         title: "10 Essential Shopify Apps to Boost Your E-commerce Sales",
         excerpt: "Discover the must-have Shopify apps that can help increase your store's conversion rate and streamline operations. Learn how to automate tasks, improve customer experience, and boost sales.",
         category: "E-commerce",
-        author: "Krishna Shrestha",
+        author: "Ryan L",
         date: "March 15, 2024",
         readTime: "8 min read",
         image: "/blog/shopify-apps.jpg",
@@ -23,7 +23,7 @@ const blogPosts = [
         title: "The Ultimate Guide to SEO for E-commerce Websites",
         excerpt: "Learn proven SEO strategies specifically tailored for e-commerce websites to improve your search rankings and drive organic traffic. Master the art of product optimization and technical SEO.",
         category: "SEO",
-        author: "Sarah Johnson",
+        author: "Kushal P",
         date: "March 12, 2024",
         readTime: "12 min read",
         image: "/blog/seo-guide.jpg",
@@ -34,7 +34,7 @@ const blogPosts = [
         title: "How to Create High-Converting Product Pages",
         excerpt: "Master the art of creating product pages that convert visitors into customers with these proven design and copywriting techniques. Learn the psychology behind successful product presentations.",
         category: "Conversion",
-        author: "Mike Anderson",
+        author: "Kushal P",
         date: "March 10, 2024",
         readTime: "10 min read",
         image: "/blog/product-page.jpg"
@@ -44,7 +44,7 @@ const blogPosts = [
         title: "Social Media Marketing Strategies for E-commerce",
         excerpt: "Effective social media strategies to promote your e-commerce store and engage with your target audience. Discover the best practices for each platform and content creation tips.",
         category: "Marketing",
-        author: "Emily Chen",
+        author: "Krishna W",
         date: "March 8, 2024",
         readTime: "9 min read",
         image: "/blog/social-media.jpg"
@@ -54,7 +54,7 @@ const blogPosts = [
         title: "Understanding E-commerce Analytics",
         excerpt: "A comprehensive guide to understanding and utilizing e-commerce analytics to make data-driven decisions. Learn how to track KPIs and optimize your online store performance.",
         category: "Analytics",
-        author: "David Wilson",
+        author: "Kushal P",
         date: "March 5, 2024",
         readTime: "11 min read",
         image: "/blog/analytics.jpg"
@@ -64,7 +64,7 @@ const blogPosts = [
         title: "Custom Shopify Theme Development Guide",
         excerpt: "Learn how to create custom Shopify themes that stand out from the competition. Master Liquid templating and theme customization techniques.",
         category: "Development",
-        author: "Alex Turner",
+        author: "Kushal P",
         date: "March 3, 2024",
         readTime: "15 min read",
         image: "/blog/shopify-custom.jpg"
@@ -74,7 +74,7 @@ const blogPosts = [
         title: "Building a Successful E-commerce Strategy",
         excerpt: "Develop a comprehensive e-commerce strategy that drives growth and increases revenue. Learn about market analysis, customer journey optimization, and growth tactics.",
         category: "Strategy",
-        author: "Lisa Wang",
+        author: "Kushal P",
         date: "March 1, 2024",
         readTime: "13 min read",
         image: "/blog/ecommerce-strategy.jpg"
@@ -84,7 +84,7 @@ const blogPosts = [
         title: "UI/UX Best Practices for E-commerce",
         excerpt: "Essential UI/UX design principles to create user-friendly and conversion-optimized e-commerce websites. Learn about user research, wireframing, and usability testing.",
         category: "Design",
-        author: "Ryan Cooper",
+        author: "Krishna W",
         date: "February 28, 2024",
         readTime: "10 min read",
         image: "/blog/ui-ux.jpg"
@@ -94,7 +94,7 @@ const blogPosts = [
         title: "Content Marketing for E-commerce Success",
         excerpt: "Create compelling content that drives traffic and converts visitors into customers. Master the art of storytelling and SEO-optimized content creation.",
         category: "Marketing",
-        author: "Emma Davis",
+        author: "Kushal P",
         date: "February 25, 2024",
         readTime: "9 min read",
         image: "/blog/content-marketing.jpg"

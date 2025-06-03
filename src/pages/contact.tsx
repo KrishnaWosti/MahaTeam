@@ -49,7 +49,7 @@ const Contact = () => {
                             <FaPhone aria-label="Phone" />
                             <div>
                                 <h3>Call Us</h3>
-                                <a href="tel:+977-970-7501118">+977-970-7501118</a>
+                                <a href="tel:+977-970-7581118">Call</a>
                             </div>
                         </div>
                         <div className={styles.infoItem}>

@@ -47,8 +47,8 @@ const Footer = () => {
                             Schedule a Consultation
                         </Link>
                         <div className={styles.contactInfo}>
-                            <p>Email: <a href="mailto:hello@mahateam.com">hello@mahateam.com</a></p>
-                            <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                            <p>Email: <a href="mailto:contact@mahateam.com">contact@mahateam.com</a></p>
+                            <p>Phone: <a href="tel:970000000">Call</a></p>
                         </div>
                     </div>
                 </div>

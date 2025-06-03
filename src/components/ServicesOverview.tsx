@@ -129,7 +129,7 @@ const ServicesOverview = () => {
                             <div className={styles.icon}>{service.icon}</div>
                             <h3>{service.title}</h3>
                             <p>{service.description}</p>
-                            <div className={styles.highlight}>{service.highlight}</div>
+                            {/* <div className={styles.highlight}>{service.highlight}</div> */}
                         </motion.div>
                     ))}
                 </motion.div>

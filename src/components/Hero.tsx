@@ -34,7 +34,7 @@ const Hero = () => {
 
                         <div className={styles.statsContainer}>
                             <div className={styles.statItem}>
-                                <span className={styles.statNumber}>2+</span>
+                                <span className={styles.statNumber}>15+</span>
                                 <span className={styles.statLabel}>Projects Completed</span>
                             </div>
                             <div className={styles.statItem}>

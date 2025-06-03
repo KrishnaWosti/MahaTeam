@@ -103,7 +103,7 @@ const WhyChooseUs = () => {
                             <div className={styles.icon}>{point.icon}</div>
                             <h3>{point.title}</h3>
                             <p>{point.description}</p>
-                            <div className={styles.highlight}>{point.highlight}</div>
+                            {/* <div className={styles.highlight}>{point.highlight}</div> */}
                         </motion.div>
                     ))}
                 </motion.div>

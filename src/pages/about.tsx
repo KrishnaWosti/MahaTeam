@@ -5,19 +5,19 @@ import { FaLinkedin, FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa';
 
 // Sample founder data (will be replaced with CMS data later)
 const founderData = {
-    name: "Kristen Luin",
+    name: "Roshan Karki",
     title: "Founder & CEO",
     image: "/founderimage.png",
     shortBio: "Building bridges between traditional businesses and the digital world.",
     story: {
         intro: `Growing up in a small town in Nepal, I witnessed firsthand how small 
-        businesses struggled to adapt to the digital age. My parents' shop was one of them.`,
+        businesses struggled to adapt to the digital age. And how they were not able to reach out to the customers.`,
 
-        journey: `After our family business closed in 2014, I dedicated myself to learning 
-        web development. I wanted to help other businesses avoid the same fate. Working 
-        with local shops, I saw how the right digital tools could transform their future.`,
+        journey: `I dedicated myself to learning web development when i just finished highschool.
+        I wanted to help other businesses flourish in the digital world and increase their revenue.
+        Working with local shops, I saw how the right digital tools could transform their future.`,
 
-        impact: `Today, we've helped hundreds of businesses thrive online. But what drives 
+        impact: `Today, we've helped fifteen businesses thrive online. But what drives 
         me isn't the numbers – it's seeing shop owners light up when they make their first 
         online sale.`
     },
@@ -50,7 +50,7 @@ const About = () => {
                             priority
                         />
                         <div className={styles.socialLinks}>
-                            <a href={founderData.socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
+                            {/* <a href={founderData.socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
                                 <FaLinkedin />
                             </a>
                             <a href={founderData.socialLinks.instagram} target="_blank" rel="noopener noreferrer">
@@ -58,7 +58,7 @@ const About = () => {
                             </a>
                             <a href={founderData.socialLinks.github} target="_blank" rel="noopener noreferrer">
                                 <FaGithub />
-                            </a>
+                            </a> */}
                         </div>
                     </motion.div>
                     <div className={styles.founderInfo}>

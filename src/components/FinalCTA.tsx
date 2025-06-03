@@ -85,7 +85,7 @@ const FinalCTA = () => {
                             whileHover="hover"
                             className={styles.primaryButton}
                         >
-                            <Link href="https://calendly.com/wostikrishna58/30min">
+                            <Link href="https://calendly.com/kushal-mahateam/30min">
                                 Book Your Free Strategy Call
                                 <motion.span
                                     variants={arrowVariants}
@@ -103,7 +103,7 @@ const FinalCTA = () => {
                             whileTap={{ scale: 0.95 }}
                         >
                             <FaPlay />
-                            <span>Watch Success Story</span>
+                            <span>Shopify - Revenue Machine</span>
                         </motion.button>
                     </motion.div>
                 </motion.div>
@@ -120,8 +120,8 @@ const FinalCTA = () => {
                             <iframe
                                 width="560"
                                 height="315"
-                                src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1"
-                                title="Client Success Story"
+                                src="https://www.youtube.com/embed/wS_rD-4J0ZM?autoplay=1"
+                                title="Random"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
@@ -130,8 +130,8 @@ const FinalCTA = () => {
                     ) : (
                         <div className={styles.videoPlaceholder}>
                             <img
-                                src="/video-thumbnail.jpg"
-                                alt="Success Story Thumbnail"
+                                src="https://weblime.com/wp-content/uploads/2022/02/Expert-Shopify-Automation-Tips.png"
+                                alt="Random Video"
                                 className={styles.thumbnail}
                             />
                             <motion.div
